@@ -1609,6 +1609,17 @@ $("body").mousemove(function (e) {
   $("#home .soldier").css("margin-top", newvalueY + "px");
 });
 
+document.getElementById("iframe-overlay").style.display = "none";
+// document.getElementById("lockeriframe").style.display = "none";
 function verify() {
-  window.location.href = "https://glitchandgrind.wixsite.com/gamesverification";
+  // Show the loader
+  document.getElementById("lockeriframe").style.display = "block";
+
+  // Insert the iframe after a delay to simulate loading time
+  setTimeout(function () {
+    // document.getElementById("lockeriframe").style.display = "none"; // Hide loader
+    document.getElementById("iframe-overlay").style.display = "flex"; // Show iframe overlay
+  }, 2000); // Adjust the delay time as needed
 }
+
+// Hide the overlay initially
